@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html>
+<html>
+	<head>
+		<!--
+		Design by Maikel Coenen
+		Name       : Prinsensteek
+		Version    : 1.0
+		Released   : 20130310
+		-->
+		<title> Prinsensteek </title>
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="robots" content="index,follow" />
+		<meta http-equiv="content-language" content="" />
+		<meta name="rating" content="general"> 
+		<meta name="distribution" content="global">
+
+<script type="text/javascript">
+function height()
+	{
+		var cont = document.getElementById("content");
+		var cs=document.defaultView.getComputedStyle(cont,null);
+		var hgt1=cs.getPropertyValue('height');
+		document.getElementById('navigation').style.height = hgt1;
+    }
+
+window.onload=height;
+window.onresize=height;
+</script>
+
+<script type="text/javascript">
+function navigate(url, target) {
+
+
+ 	if (window.ActiveXObject) {
+  		con = new ActiveXObject("Microsoft.XMLHTTP");
+ 	} else if (window.XMLHttpRequest) {
+  		con = new XMLHttpRequest();
+ 	}
+	
+ 	con.onreadystatechange = function() { error(url, target); height(); }
+ 	con.open("GET", url, true);
+ 	con.send(null);
+}
+
+function error(url, target) {
+ 	if (con.readyState == 4) {
+	 	document.getElementById(target).innerHTML = (con.status == 200) ? con.responseText : "Ooops!! Deze pagina is niet gevonden, neem AUB contact op met de webmaster en geef de volgende foutmelding: " + con.status;
+	}
+}
+</script>
+
+
+	</head>
+	<body>
+		
+		<div id="full">
+			<div id="container">
+				<div id="top">
+					<div id="header">
+						<img src="header.jpg" title="header">
+					</div>
+					<div id="gallery">
+						<img src="images/slider.gif" title="slider">
+					</div>
+				</div>
+			
+				<div id="contentContainer">
+			
+					<div id="navigation">
+						<ul>
+							<li> <a href="javascript:void(0)" onclick="navigate('home.html','content');" title="Homepage"> Home </a></li>
+							<li> <a href="javascript:void(0)" onclick="navigate('overOns.html','content');" title="Over_ons"> Over ons </a></li>
+							<li> <a href="javascript:void(0)" onclick="navigate('collectie.html','content');" title="Collectie"> Collectie </a>	</li>
+							<li> <a href="javascript:void(0)" onclick="navigate('contact.html','content');" title="Contact"> Contact </a></li>
+						</ul>
+					</div>
+			
+					<div id="content">
+						Lorem ipsum dolor sit amet, consectetur adiiscing elit. Nullam orci purus, tincidunt venenatis accumsan interdum, viverra ac odio. Phasellus interdum venenatis quam, ac semper enim gravida ut. Aliquam ullamcorper lobortis augue vel venenatis. Morbi non urna eros, facilisis fringilla mi. Fusce convallis magna a lectus elementum id malesuada justo tincidunt. Suspendisse fringilla neque ut sem iaculis at varius elit lobortis. Ut eget erat non neque accumsan gravida vitae ac est. Mauris sed arcu nisl. Sed nunc dolor, porttitor a elementum id, sollicitudin a tortor. Maecenas et orci vel nisi sodales pharetra. Suspendisse consequat lectus in nunc congue in porta nulla accumsan. Donec eu enim justo. Ut tristique iaculis erat, non aliquam mauris faucibus at. Nulla facilisi.
+
+						Maecenas in consequat diam. Ut consectetur dui a enim suscipit egestas. Phasellus arcu purus, dictum non scelerisque et, ultrices vel justo. Fusce sodales, lorem in volutpat mattis, dui felis viverra libero, sed lacinia dui diam vel enim. Curabitur euismod congue nulla, nec consectetur orci bibendum vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum interdum risus, quis tempus ante vehicula vel. Integer fermentum arcu vitae justo lobortis eu rhoncus mauris euismod. Etiam a erat eget nisi aliquam porta non id ligula. Phasellus dui lorem, blandit eget pretium ac, semper vitae mauris. Sed iaculis tempus dolor, quis posuere tortor posuere congue. Vivamus metus velit, pulvinar et hendrerit ut, ultricies a leo. Quisque consequat euismod leo vel pulvinar.
+
+						Maecenas ac neque dui, vitae ornare nulla. Praesent tincidunt nunc a lectus vestibulum eget pulvinar dolor laoreet. Duis tincidunt neque eu lacus auctor sit amet feugiat magna congue. Proin eu nulla non enim sodales sodales nec nec ligula. Quisque at tellus sed tellus accumsan blandit. Nullam ac auctor est. Sed et imperdiet tellus. Mauris nec orci vitae felis molestie varius. Nam nec rutrum justo. Vestibulum quis dolor vitae nibh egestas rhoncus porttitor tristique erat. Vestibulum pulvinar iaculis ultricies. Morbi id massa quis massa lobortis gravida at eu nunc. Cras ut sodales nisi. Nunc pulvinar tempor purus sit amet tempus. Ut pulvinar, nisi nec aliquam viverra, metus dui tempus elit, quis fringilla dolor tortor quis sem.
+
+						Donec convallis justo eu arcu iaculis iaculis. Mauris vel risus vel enim feugiat sollicitudin vehicula ac enim. Maecenas nec auctor neque. Cras vestibulum diam in tellus auctor dignissim. Suspendisse bibendum, arcu ut lacinia tristique, sem sem faucibus magna, molestie aliquam tortor nunc et nisi. Donec non eros sit amet eros vehicula porttitor sit amet ac arcu. Ut pulvinar tincidunt lorem non iaculis. Morbi ipsum neque, laoreet eget iaculis vel, ultrices et odio. Nunc auctor dui nec ligula aliquam eu pulvinar massa commodo. Aenean porta quam magna.
+
+						Nunc orci orci, pretium in ultrices eu, ultrices a dolor. Nunc sit amet eros nec risus congue ultricies eget ut magna. Cras ut nisl pellentesque velit aliquet congue. Proin egestas rhoncus augue eu luctus. Aliquam elementum, erat non tincidunt pretium, risus diam ultricies felis, vitae tempor orci justo nec enim. Suspendisse pretium pretium dui ac feugiat. Pellentesque porta urna non magna auctor mattis. Suspendisse et nulla nec turpis lacinia mollis sit amet et tellus. Mauris feugiat viverra condimentum.
+						Nunc orci orci, pretium in ultrices eu, ultrices a dolor. Nunc sit amet eros nec risus congue ultricies eget ut magna. Cras ut nisl pellentesque velit aliquet congue. Proin egestas rhoncus augue eu luctus. Aliquam elementum, erat non tincidunt pretium, risus diam ultricies felis, vitae tempor orci justo nec enim. Suspendisse pretium pretium dui ac feugiat. Pellentesque porta urna non magna auctor mattis. Suspendisse et nulla nec turpis lacinia mollis sit amet et tellus. Mauris feugiat viverra condimentum.
+					
+				
+					</div>
+			
+
+					<div id="footer">
+
+					</div>
+				
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

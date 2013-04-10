@@ -1,0 +1,26 @@
+<?php
+/*Gebruik conn.php voor de database connectie.*/
+require_once 'conn.php';
+?>
+<?php $foto1 = "SELECT foto FROM steken WHERE id=1"; ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<title>="Home"</title>
+	<link href="styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="content">
+			<div id="foto">
+				<?php echo $foto1;?>
+				<img src="<?php $foto1; ?>">
+				<img src="images/steken/m (2).jpg" title="miniatuur 2">
+				<img src="images/steken/m (3).jpg" title="miniatuur 3">
+				<img src="images/steken/m (4).jpg" title="miniatuur 4">
+				<img src="images/steken/m (5).jpg" title="miniatuur 5">
+				<img src="images/steken/m (6).jpg" title="miniatuur 6">
+			</div>
+		</div>
+	</body>
+</html>
