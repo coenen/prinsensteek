@@ -42,7 +42,7 @@ function navigate(url, target) {
  	}
 	
  	con.onreadystatechange = function() { error(url, target); height(); }
- 	con.open("GET", url, true);
+ 	con.open("POST", url, true);
  	con.send(null);
 }
 
@@ -74,7 +74,7 @@ function error(url, target) {
 						<ul>
 							<li> <a href="javascript:void(0)" onclick="navigate('home.html','content');" title="Homepage"> Home </a></li>
 							<li> <a href="javascript:void(0)" onclick="navigate('overOns.html','content');" title="Over_ons"> Over ons </a></li>
-							<li> <a href="javascript:void(0)" onclick="navigate('collectie.html','content');" title="Collectie"> Collectie </a>	</li>
+							<li> <a href="javascript:void(0)" onclick="navigate('collectie.php','content');" title="Collectie"> Collectie </a>	</li>
 							<li> <a href="javascript:void(0)" onclick="navigate('contact.html','content');" title="Contact"> Contact </a></li>
 						</ul>
 					</div>
